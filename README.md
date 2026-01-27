@@ -4,7 +4,6 @@ A full-stack application built during the CodeTribe Academy program. This platfo
 
 ## 🚀 Live Demo
 - **Frontend:** [https://codetribe-platform.onrender.com/](https://codetribe-platform.onrender.com/)
-- **Backend API:** [https://your-backend-url.onrender.com/api/users](https://your-backend-url.onrender.com/api/users)
 
 ## 🛠️ Tech Stack
 - **Frontend:** Vite, React (or your specific framework)
@@ -84,12 +83,3 @@ This project is part of the mLab CodeTribe Academy. Contributions and feedback a
 
 ```
 
----
-
-### Why this is a "Safe" README:
-1.  **Usage Instructions:** It tells people to create their *own* `.env` file rather than expecting one to be there.
-2.  **Explicit Warning:** It includes a section on **Security** to remind you (and others) not to push secrets.
-3.  **Project Context:** It mentions **mLab CodeTribe**, which gives your project professional context for potential employers.
-4.  **No Secrets:** It uses placeholders like `your_supabase_anon_key` so no real data is ever in the code.
-
-**Now that your README is ready and your repo is clean, are you ready to test the connection with your new Supabase keys?**

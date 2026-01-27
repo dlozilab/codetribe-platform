@@ -77,9 +77,4 @@ This project uses environment variables for sensitive information. **Never commi
 
 This project is part of the mLab CodeTribe Academy. Contributions and feedback are welcome!
 
----
-
-*Maintained by [dlozilab*](https://www.google.com/search?q=https://github.com/dlozilab)
-
-```
 

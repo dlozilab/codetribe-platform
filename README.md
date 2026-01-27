@@ -1,4 +1,4 @@
-# Tribal Data Center
+# CodeTribe Platform
 
 A full-stack application built during the CodeTribe Academy program. This platform features a Node.js backend integrated with Supabase for data management and authentication, and a modern frontend deployed on Render.
 

@@ -37,7 +37,7 @@ A full-stack application built during the CodeTribe Academy program. This platfo
 
 1. **Clone the repository:**
 ```bash
-git clone [https://github.com/dlozilab/codetribe-platform.git](https://github.com/dlozilab/codetribe-platform.git)
+git clone https://github.com/dlozilab/codetribe-platform.git
 cd codetribe-platform
 
 ```

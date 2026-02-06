@@ -1,10 +1,69 @@
-*{
+/* 1. Global Variables (The "Theme") */
+:root {
+  --mlab-teal: #005F60;
+  --codetribe-green: #8DC63F;
+  --tribal-dark: #2D3E50;
+  --white: #ffffff;
+  --light-grey: #f4f4f4;
+  --text-grey: #666666;
+  --shadow: 0 2px 8px rgba(0,0,0,0.1);
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 2. Global Resets */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html, body, #root{
   width: 100%;
   height: 100%;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--white);
+  color: var(--tribal-dark);
+  /* Add padding so the fixed navbar doesn't cover content */
+  padding-top: 70px; 
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s ease;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+
+
+
+/* --- VISIBILITY SWAPPING LOGIC --- */
+
+/* Default (Desktop View): Show Links, Hide Hamburger */
+.desktop-menu-area {
+  display: flex !important;
+}
+
+.mobile-toggle-btn {
+  display: none !important;
+}
+
+/* Mobile View (Below 768px): Hide Links, Show Hamburger */
+@media (max-width: 768px) {
+  .desktop-menu-area {
+    display: none !important;
+  }
+  
+  .mobile-toggle-btn {
+    display: flex !important; /* Flex ensures the icon centers */
+  }
 }

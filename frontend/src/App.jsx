@@ -24,6 +24,7 @@ import Register from './pages/register'; // For registering staff
 // Layouts
 import Navbar from './components/navbar'; // Assuming you have this
 import Footer from './components/footer';
+import Layout from './pages/layout';
 
 // --- 2. Security Wrapper (The Gatekeeper) ---
 // This component checks if the user is allowed in.
@@ -50,10 +51,12 @@ function App() {
     <BrowserRouter>
       <Routes>
         {/* PUBLIC ROUTES (Anyone can see) */}
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/apply" element={<Apply />} />
-        <Route path="/waitlist" element={<Waitlist />} />
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/apply" element={<Apply />} />
+          <Route path="/waitlist" element={<Waitlist />} />
+        </Route>
 
         {/* PROTECTED: TRAINEE ZONE */}
         <Route element={<ProtectedRoute allowedRoles={['trainee', 'facilitator', 'admin']} />}>

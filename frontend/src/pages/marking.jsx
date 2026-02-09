@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function marking() {
+export default function Marking() {
   return (
-    <div>marking</div>
+    <div>MARKING</div>
   )
 }

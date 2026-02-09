@@ -50,9 +50,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         {/* PUBLIC ROUTES (Anyone can see) */}
-        <Route path="/" element={<><Navbar /><Home /><Footer /></>} />
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/apply" element={<><Navbar /><Apply /><Footer /></>} />
+        <Route path="/apply" element={<Apply />} />
         <Route path="/waitlist" element={<Waitlist />} />
 
         {/* PROTECTED: TRAINEE ZONE */}

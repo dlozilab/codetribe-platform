@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function apply() {
+export default function Apply() {
   return (
     <div>apply</div>
   )

@@ -80,7 +80,7 @@ const Navbar = () => {
   };
 
   return (
-    <div style={styles.wrapper}>
+    <nav style={styles.wrapper}>
       {/* MAIN BAR */}
       <div style={styles.bar}>
         
@@ -145,7 +145,7 @@ const Navbar = () => {
           </button>
         </div>
       )}
-    </div>
+    </nav>
   );
 };
 

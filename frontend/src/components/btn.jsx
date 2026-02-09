@@ -1,7 +1,8 @@
 import React from 'react'
 
-export default function btn() {
+export default function Btn({name,url}) {
+
   return (
-    <div>btn</div>
+    <button >{name}</button>
   )
 }

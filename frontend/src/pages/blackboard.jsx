@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function blackboard() {
+export default function Blackboard() {
   return (
     <div>blackboard</div>
   )

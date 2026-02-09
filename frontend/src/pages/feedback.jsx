@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function feedback() {
+export default function Feedback() {
   return (
-    <div>feedback</div>
+    <div>F</div>
   )
 }

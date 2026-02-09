@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function announcements() {
+export default function Announcements() {
   return (
     <div>announcements</div>
   )

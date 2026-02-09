@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function campus() {
+export default function Campus() {
   return (
     <div>campus</div>
   )

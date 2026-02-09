@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function waitlist() {
+export default function Waitlist() {
   return (
     <div>waitlist</div>
   )

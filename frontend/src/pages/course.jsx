@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function course() {
+export default function Course() {
   return (
-    <div>course</div>
+    <div>C</div>
   )
 }

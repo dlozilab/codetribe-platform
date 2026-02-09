@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function submission() {
+export default function Submission() {
   return (
-    <div>submission</div>
+    <div>SUBMIT</div>
   )
 }

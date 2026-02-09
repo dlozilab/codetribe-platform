@@ -22,9 +22,8 @@ import Marking from './pages/marking';
 import Register from './pages/register'; // For registering staff
 
 // Layouts
-import Navbar from './components/navbar'; // Assuming you have this
-import Footer from './components/footer';
 import Layout from './pages/layout';
+import Footer from "./components/footer";
 
 // --- 2. Security Wrapper (The Gatekeeper) ---
 // This component checks if the user is allowed in.
@@ -78,6 +77,7 @@ function App() {
         {/* 404 CATCH ALL */}
         <Route path="*" element={<NoPage/>} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }

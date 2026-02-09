@@ -1,38 +1,46 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function NoPage() {
   const navigate = useNavigate();
 
   return (
-    // Main Container: Takes up full screen height (100vh) to center everything
-    <div className="w3-display-container w3-light-grey" style={{ height: '100vh' }}>
-      
-      <div className="w3-display-middle w3-center">
-        {/* Big 404 Text */}
-        <h1 className="w3-jumbo w3-animate-top w3-text-grey" style={{ fontWeight: 'bold' }}>
-          404
-        </h1>
+      <section style={{height:"100%",width:"100%",padding:"2%",display:"flex",justifyContent:"center",alignItems:"center"}}>
         
-        {/* Separator Line */}
-        <hr className="w3-border-grey" style={{ margin: 'auto', width: '50%' }} />
-        
-        {/* Message */}
-        <h3 className="w3-center w3-animate-right">Page Not Found</h3>
-        <p className="w3-center w3-large w3-text-dark-grey">
-          The page you are looking for does not exist or has been moved.
-        </p>
+        <div style={{ textAlign: "center", maxWidth: "600px", fontFamily: "Segoe UI, sans-serif" }}>
+            
+            {/* Technical Error */}
+            <h1 style={{ fontSize: "100px", margin: 0, color: "#005F60", lineHeight: "1" }}>404</h1>
+            <p style={{ fontSize: "24px", color: "#333", fontWeight: "bold", margin: "10px 0" }}>
+                Page Not Found
+            </p>
 
-        {/* Back Button */}
-        <button 
-          onClick={() => navigate('/')} 
-          className="w3-button w3-black w3-hover-blue w3-round-large w3-large w3-margin-top w3-animate-opacity"
-        >
-          <i className="fa fa-home" style={{ marginRight: '8px' }}></i>
-          Back to Home
-        </button>
-      </div>
+            {/* Separator */}
+            <hr style={{ width: "60%", margin: "20px auto", borderTop: "1px solid #ccc" }} />
 
-    </div>
+            {/* Normal English Explanation */}
+            <p style={{ fontSize: "16px", color: "#666", lineHeight: "1.6", marginBottom: "30px" }}>
+                We couldn't find the page you were looking for. It may have been removed, renamed, or you might have typed the link incorrectly.
+            </p>
+
+            {/* Back Home Button */}
+            <button 
+                onClick={() => navigate('/')}
+                style={{ 
+                    padding: "12px 30px", 
+                    backgroundColor: "#005F60", 
+                    color: "white", 
+                    border: "none", 
+                    borderRadius: "5px", 
+                    fontSize: "16px", 
+                    cursor: "pointer",
+                    boxShadow: "0 2px 5px rgba(0,0,0,0.2)"
+                }}
+            >
+                Go Back Home
+            </button>
+            
+        </div>
+
+      </section>
   );
 }

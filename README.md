@@ -4,6 +4,7 @@ A full-stack application built during the CodeTribe Academy program. This platfo
 
 ## 🚀 Live Demo
 - **Frontend:** [https://codetribe-platform.onrender.com/](https://codetribe-platform.onrender.com/)
+- **Backend:** [https://codetribe-server.onrender.com/](https://codetribe-server.onrender.com/)
 
 ## 🛠️ Tech Stack
 - **Frontend:** Vite, React (or your specific framework)

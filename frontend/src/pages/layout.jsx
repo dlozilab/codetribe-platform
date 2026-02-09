@@ -5,7 +5,10 @@ import Footer from "../components/footer";
 export default function Layout() {
   return (
     <>
-      <Outlet />
+      <Navbar />
+      <section style={{height:"100%",width:"100%",padding:"2%"}}>
+        <Outlet />
+      </section>
       <Footer />
     </>
   );

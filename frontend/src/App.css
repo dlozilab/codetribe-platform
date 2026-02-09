@@ -26,6 +26,8 @@ body {
   font-family: var(--font-main);
   background-color: var(--white);
   color: var(--tribal-dark);
+  /* Add padding so the fixed navbar doesn't cover content */
+  padding-top: 70px; 
 }
 
 a {

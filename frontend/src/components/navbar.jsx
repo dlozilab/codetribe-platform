@@ -95,16 +95,16 @@ const Navbar = () => {
         */}
         <div className="desktop-menu-area" style={styles.desktopMenu}>
           
-          <Link to="/" style={{ ...styles.link}}>
+          <Link to="/waitlist" style={{ ...styles.link}}>
             Home
           </Link>
 
-          <Link to="/apply" style={styles.link}>
+          <Link to="/waitlist" style={styles.link}>
             Apply
           </Link>
           
           <button 
-            onClick={() => navigate('/login')} 
+            onClick={() => navigate('/waitlist')} 
             title="Staff Login"
             style={styles.iconBtn}
           >

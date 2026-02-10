@@ -54,7 +54,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/apply" element={<Apply />} />
-          <Route path="/waitlist" element={<Waitlist />} />
+          
         </Route>
 
         {/* PROTECTED: TRAINEE ZONE */}
@@ -76,6 +76,9 @@ function App() {
 
         {/* 404 CATCH ALL */}
         <Route path="*" element={<NoPage/>} />
+
+        {/* Wait List */}
+        <Route path="/waitlist" element={<Waitlist />} />
       </Routes>
       <Footer/>
     </BrowserRouter>

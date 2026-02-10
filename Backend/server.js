@@ -6,6 +6,8 @@ import logger from './utils/logger.js';
 import authMiddleware from './middleware/authMiddleware.js';
 import cors from 'cors';
 import userRoutes from './route/userRoutes.js'
+import waitlistRoutes from './route/waitListRoutes.js'; 
+
 import dotenv from "dotenv"
 dotenv.config({ path: '../.env' });
 
@@ -29,7 +31,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api/users', authMiddleware, userRoutes);
-
+app.use('/api/waitlist', waitlistRoutes);
 
 // 404 fallback
 app.use((req, res) => {

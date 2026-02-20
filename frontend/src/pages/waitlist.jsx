@@ -4,7 +4,7 @@ import { MapPin, Code2, Laptop, CheckCircle, CalendarClock } from 'lucide-react'
 
 // CONFIG
 const PROJECT_TAG = "CodeTribe-Recruitment-2026"; 
-const API_URL = "https://codetribe-server.onrender.com/api/waitlist"; 
+const API_URL = "http://localhost:5000/api/waitlist"; 
 
 const Waitlist = () => {
   const [loading, setLoading] = useState(false);

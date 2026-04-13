@@ -1,7 +1,13 @@
-
+import Navbar from "../components/navbar";
 
 export default function Home() {
   return (
-    <section>HOME</section>
-  )
+    <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+
+      <Navbar />
+      <main style={{ flex: 1 }}>
+        <section>HOME PAGE</section>
+      </main>
+    </div>
+  );
 }

@@ -3,7 +3,7 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import logger from './utils/logger.js';
-import authMiddleware from './middleware/authMiddleware.js';
+//import authMiddleware from './middleware/authMiddleware.js';
 import cors from 'cors';
 import userRoutes from './route/userRoutes.js'
 import waitlistRoutes from './route/waitListRoutes.js'; 
@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
   res.send('CodeTribe Platform: running!')
 })
 
-app.use('/api/users', authMiddleware, userRoutes);
+app.use('/api/users', userRoutes);
 app.use('/api/waitlist', waitlistRoutes);
 
 // 404 fallback

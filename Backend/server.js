@@ -26,6 +26,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(logger.fileLogger);
 }
 
+app.use(express.json());
 
 // Routes
 app.get('/', (req, res) => {

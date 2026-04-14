@@ -24,6 +24,7 @@ import Register from './pages/register'; // For registering staff
 // Layouts
 import Layout from './pages/layout';
 import Footer from "./components/footer";
+import Policies from './pages/Policies';
 
 // --- 2. Security Wrapper (The Gatekeeper) ---
 // This component checks if the user is allowed in.
@@ -72,6 +73,7 @@ function App() {
           <Route path="/admin/users" element={<Users />} />
           <Route path="/admin/marking" element={<Marking />} />
           <Route path="/admin/register-staff" element={<Register />} />
+          <Route path='/admin/policies' element={<Policies/>} />
         </Route>
 
         {/* 404 CATCH ALL */}

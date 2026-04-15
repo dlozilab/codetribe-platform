@@ -7,6 +7,7 @@ import logger from './utils/logger.js';
 import cors from 'cors';
 import userRoutes from './route/userRoutes.js'
 import waitlistRoutes from './route/waitListRoutes.js'; 
+import courseRoutes from './route/courseRoutes.js';
 
 import dotenv from "dotenv"
 dotenv.config({ path: '../.env' });
@@ -35,6 +36,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/users', userRoutes);
 app.use('/api/waitlist', waitlistRoutes);
+app.use('/api/courses', courseRoutes);
 
 // 404 fallback
 app.use((req, res) => {

@@ -49,5 +49,5 @@ app.use((req, res) => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`CodeTribe Platform Server running on http://localhost:${PORT}`);
 });

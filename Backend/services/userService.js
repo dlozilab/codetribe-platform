@@ -2,6 +2,7 @@ import { supabase } from '../config/supabaseClient.js';
 
 // ✅ Correct: Handles both Auth account and Profile table
 export const registerUserWithAuth = async (userData, password) => {
+  // 1. Create Auth User
   const { data: authData, error: authError } = await supabase.auth.signUp({
     email: userData.email,
     password: password,
@@ -9,15 +10,34 @@ export const registerUserWithAuth = async (userData, password) => {
 
   if (authError) throw authError;
 
+  // 2. Prepare CLEAN data for the table (only fields that exist in your DB)
+  const cleanProfile = {
+    id: authData.user.id, // The link
+    first_names: userData.first_names,
+    surname: userData.surname,
+    email: userData.email,
+    phone: userData.phone,
+    role: userData.role,
+    campus_id: userData.campus_id,
+    gender: userData.gender,
+    race: userData.race,
+    date_of_birth: userData.date_of_birth,
+    github_user: userData.github_user,
+    passport_id: userData.passport_id
+  };
+
+  // 3. Insert into public.users
   const { data: profileData, error: profileError } = await supabase
     .from('users')
-    .insert([{
-      ...userData,
-      id: authData.user.id 
-    }])
+    .insert([cleanProfile])
     .select();
 
-  if (profileError) throw profileError;
+  if (profileError) {
+    // If the table insert fails, we should know why!
+    console.error("Profile Table Insert Error:", profileError.message);
+    throw profileError;
+  }
+
   return { user: authData.user, profile: profileData[0] };
 };
 

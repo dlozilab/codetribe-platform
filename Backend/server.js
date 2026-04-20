@@ -31,7 +31,7 @@ app.use(express.json());
 
 // Routes
 app.get('/', (req, res) => {
-  res.send('CodeTribe Platform: running!')
+  res.send('CodeTribe Platform: running! and it is live on Render');
 })
 
 app.use('/api/users', userRoutes);

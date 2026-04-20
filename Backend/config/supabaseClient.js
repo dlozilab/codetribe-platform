@@ -1,10 +1,15 @@
 import { createClient } from '@supabase/supabase-js';
 import dotenv from 'dotenv';
+
 dotenv.config();
-dotenv.config({ path: '../.env' });
 
 const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_ANON_KEY;
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
-// Create a single supabase client for interacting with your database
-export const supabase = createClient(supabaseUrl, supabaseKey);
+// This client now has "Superuser" powers
+export const supabase = createClient(supabaseUrl, supabaseServiceKey, {
+  auth: {
+    autoRefreshToken: false,
+    persistSession: false
+  }
+});

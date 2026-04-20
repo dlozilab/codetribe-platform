@@ -36,6 +36,7 @@ export const updateCourse = async (id, courseData) => {
     return data[0];
 };
 
+
 export const deleteCourse = async (id) => {
   const { data, error } = await supabase
     .from('courses')

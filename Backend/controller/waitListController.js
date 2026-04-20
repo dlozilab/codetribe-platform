@@ -2,17 +2,17 @@ import * as waitlistService from '../services/WaitListService.js';
 
 export const addToWaitlist = async (req, res) => {
   console.log("Waitlist controller", req.body);
-  const { project, email, name, google_id, img_url, source } = req.body;
+  const { programme_name, email, name, google_id, img_url, source } = req.body;
 
   // Basic Validation
-  if (!email || !project) {
-    return res.status(400).json({ error: "Email and Project ID are required." });
+  if (!email || !programme_name) {
+    return res.status(400).json({ error: "Email and Programme Name are required." });
   }
 
   try {
     // Call the service
     const entry = await waitlistService.insertWaitlistEntry({
-      project,
+      programme_name,
       email,
       name,
       google_id,

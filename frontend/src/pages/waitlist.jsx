@@ -41,7 +41,7 @@ const Waitlist = () => {
       const finalSource = sourceParam || referrer || 'Direct/Unknown';
 
       const payload = {
-        project: PROJECT_TAG,
+        programme_name: PROJECT_TAG,
         email: user.email,
         name: user.user_metadata.full_name,
         google_id: user.id,

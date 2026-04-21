@@ -36,3 +36,13 @@ export const addToWaitlist = async (req, res) => {
     return res.status(500).json({ error: "Server error processing waitlist" });
   }
 };
+
+export const getWaitlist = async (req, res) => {
+  try {
+    const entries = await waitlistService.getWaitlistEntries();
+    return res.status(200).json(entries);
+  } catch (error) {
+    console.error("Get Waitlist Error:", error.message);
+    return res.status(500).json({ error: "Server error fetching waitlist" });
+  }
+};

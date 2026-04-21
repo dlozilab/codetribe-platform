@@ -15,3 +15,15 @@ export const insertWaitlistEntry = async (waitlistData) => {
 
   return data[0];
 };
+
+export const getWaitlistEntries = async () => {
+  const { data, error } = await supabase
+    .from('waiting_list')
+    .select('*');
+
+  if (error) {
+    throw error;
+  }
+
+  return data;
+};
